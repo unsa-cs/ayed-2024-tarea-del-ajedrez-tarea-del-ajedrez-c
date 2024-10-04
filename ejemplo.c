@@ -4,6 +4,6 @@
 void display(){
   //char** blackKnight = reverse(knight);
   //interpreter(blackKnight);
-  char** whitesquare = whiteSquare;
+  char* whitesquare[] = whiteSquare;
   interpreter(whitesquare);
 }
