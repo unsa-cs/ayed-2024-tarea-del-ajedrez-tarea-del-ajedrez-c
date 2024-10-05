@@ -9,5 +9,6 @@ void display(){
   //char** prueba3 = join(whiteS, blackS, whiteS, blackS, whiteS, blackS, whiteS, blackS);
   char** prueba4 = join(whiteS, blackS);
   char** prueba5 = join(prueba2, prueba4);
-  interpreter(prueba5);
+  char** prueba6 = join(prueba5, prueba5);
+  interpreter(prueba6);
 }
