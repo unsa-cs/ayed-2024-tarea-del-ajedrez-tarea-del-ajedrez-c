@@ -9,5 +9,6 @@ void display(){
   char** prueba8 = reverse(prueba7);
   char** prueba9 = flipH(prueba7);
   char** prueba10 = up(prueba7, prueba8);
-  interpreter(prueba10);
+  char** prueba11 = superImpose(prueba7,prueba8);
+  interpreter(prueba11);
 }
