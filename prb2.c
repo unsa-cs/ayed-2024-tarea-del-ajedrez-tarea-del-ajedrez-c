@@ -9,9 +9,9 @@ void display(){
   char** prueba4 = join(whiteS, blackS);
   char** prueba7 = repeatH(prueba2, 4);
   char** prueba8 = reverse(prueba7);
-  for(int i=0; i<4; i++){
-    interpreter(prueba2);
+  for(int i = 0; i < 2; i++){
+    prueba2 = join(prueba2, prueba2);
   }
-  //interpreter(prueba8);
+  interpreter(reverse(prueba2));
 }
 
