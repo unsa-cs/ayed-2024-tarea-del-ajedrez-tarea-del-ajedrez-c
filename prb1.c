@@ -11,5 +11,6 @@ void display(){
   char** prueba5 = join(prueba2, prueba4);
   char** prueba6 = join(prueba5, prueba5);
   char** prueba7 = repeatH(prueba4, 4);
-  interpreter(prueba7);
+  char** prueba8 = repeatH(prueba4, 10);
+  interpreter(prueba8);
 }
