@@ -6,5 +6,6 @@ void display(){
   char** whiteS = whiteSquare;
   char** prueba = repeatH(whiteS, 2);
   char** prueba2 = join(whiteS, blackS);
-  interpreter(prueba2);
+  char** prueba3 = join(whiteS, blackS, whiteS, blackS, whiteS, blackS, whiteS, blackS);
+  interpreter(prueba3);
 }
