@@ -8,6 +8,6 @@ void display(){
   char** prueba7 = repeatH(prueba2, 4);
   char** prueba8 = reverse(prueba7);
   char** prueba9 = flipH(prueba7);
-
-  interpreter(prueba9);
+  char** prueba10 = up(prueba7, prueba8);
+  interpreter(prueba10);
 }
