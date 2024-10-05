@@ -18,5 +18,6 @@ void display(){
   char** prueba14 = repeatV(whiteS, 4);
   char** prueba15 = repeatV(blackS, 4);
   char** prueba16 = join(prueba14, prueba15);
-  interpreter(prueba16);
+  char** prueba17 = repeatV(join(prueba2, reverse(prueba2)), 2);
+  interpreter(prueba17);
 }
