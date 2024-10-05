@@ -11,5 +11,6 @@ void display(){
   char** prueba10 = up(prueba7, prueba8);
   char** prueba11 = superImpose(prueba7,prueba8);
   char** prueba12 = up(prueba8, prueba7);
-  interpreter(prueba12);
+  char** prueba13 = up(prueba12, prueba12);
+  interpreter(prueba13);
 }
