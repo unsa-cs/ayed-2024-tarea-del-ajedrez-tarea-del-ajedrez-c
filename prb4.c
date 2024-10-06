@@ -2,7 +2,7 @@
 #include "figures.h"
 #include "stdio.h"
 
-struct figureChess{
+/*struct figureChess{
   
 };
 
@@ -12,7 +12,7 @@ int getSize(char** figure){
     size++;
   }
   return size; 
-};
+};*/
 
 void display(){
   char** blackS = reverse(whiteSquare);
@@ -29,6 +29,7 @@ void display(){
   char** prueba14 = join(prueba13, bishop); // + alfil
   char** prueba15 = flipH(prueba14);
   char** prueba16 = flipV(prueba14);
-  printf("tamaño de una figura es = %d\n", getSize(knight));  
-  interpreter(prueba16);
+  //printf("tamaño de una figura es = %d\n", getSize(knight));
+  char** prueba17 = join(join(join(join(join(join(join(rook, knight), bishop), queen), king), bishop), knight), rook);  
+  interpreter(prueba17);
 }
