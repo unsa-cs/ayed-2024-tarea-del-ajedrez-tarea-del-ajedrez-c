@@ -2,11 +2,13 @@
 #include "figures.h"
 #include "stdio.h"
 
-/*struct figureChess{
-  
+struct figureChess{
+  char** figure = knight;
+  char** whiteS = whiteSquare;
+  char** chess = superImpose(knight, whiteSquare);
 };
 
-int getSize(char** figure){
+/*int getSize(char** figure){
   int size = 0;
   while(figure[size]){
     size++;
@@ -31,5 +33,8 @@ void display(){
   char** prueba16 = flipV(prueba14);
   //printf("tamaño de una figura es = %d\n", getSize(knight));
   char** prueba17 = join(join(join(join(join(join(join(rook, knight), bishop), queen), king), bishop), knight), rook);  
-  interpreter(prueba17);
+  figureChess figure1;
+  
+  interpreter(figure1.chess);
+
 }
