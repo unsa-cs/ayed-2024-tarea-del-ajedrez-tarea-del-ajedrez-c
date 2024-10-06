@@ -57,8 +57,9 @@ void display(){
   char** figuresWhite = up(rowFiguresStart, rowPawn);
   //Square with Figures
   char** boardFiguresWhite = superImpose(figuresWhite, boardChess);
-  char** boardComplete = up(boardFiguresWhite, boardChessHalf);   
-  char** boardComplete2 = up(boardComplete, rowStartBoxReverse);
+  char** boardComplete = up(boardFiguresWhite, boardChessHalf);
+  char** figuresBlack = reverse(up(rowPawn, rowFiguresStart));   
+  char** boardComplete2 = up(boardComplete, figuresBlack);
   //Interpreter
   interpreter(boardComplete2);
 }
