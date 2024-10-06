@@ -1,12 +1,30 @@
 #include "chess.h"
 #include "figures.h"
 #include "stdio.h"
+#define MAX_SIZE 8
+
 
 struct figureChess{
-  char** figure = knight;
-  char** whiteS = whiteSquare;
-  char** chess = superImpose(knight, whiteSquare);
+  char** arrayfigure[MAX_SIZE];
+  char** figures;
 };
+void chess(figureChess c){
+  c->arrayfigure[1] = rook;
+  c->arrayfigure[2] = knight;
+  c->arrayfigure[3] = bishop;
+  c->arrayfigure[4] = queen;
+  c->arrayfigure[5] = king;
+  c->arrayfigure[6] = bishop;
+  c->arrayfigure[7] = knight;
+  c->arrayfigure[8] = rook;
+}
+char** fila(figureChess c){
+  for(int i = 0; i < MAX_SIZE; i++){
+    c.figures = join(c.arrarfigure[i];
+  }
+  return c;
+}
+
 
 /*int getSize(char** figure){
   int size = 0;
@@ -34,7 +52,8 @@ void display(){
   //printf("tamaño de una figura es = %d\n", getSize(knight));
   char** prueba17 = join(join(join(join(join(join(join(rook, knight), bishop), queen), king), bishop), knight), rook);  
   figureChess figure1;
-  
-  interpreter(figure1.chess);
+  chess(figure1);
+  filas(figure1);
+  interpreter(figure1.figures);
 
 }
