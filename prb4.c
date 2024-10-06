@@ -12,5 +12,9 @@ void display(){
   char** prueba10 = superImpose(whiteSquare, reverse(knight));
   char** prueba11 = superImpose(knight, whiteSquare);
   char** prueba12 = superImpose(knightB, prueba8);
-  interpreter(prueba12);
+  char** prueba13 = join(rook, knight); // torre con caballo
+  char** prueba14 = join(prueba13, bishop); // + alfil
+  char** prueba15 = flipH(prueba14);
+  char** prueba16 = flipV(prueba14);
+  interpreter(prueba16);
 }
