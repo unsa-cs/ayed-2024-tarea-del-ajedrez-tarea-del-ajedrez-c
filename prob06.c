@@ -60,7 +60,9 @@ void display(){
   char** boardComplete = up(boardFiguresWhite, boardChessHalf);
   char** figuresBlack = reverse(up(rowPawn, rowFiguresStart));   
   char** boardComplete2 = up(boardComplete, figuresBlack);
+  char** blackBoxes = superImpose(figuresBlack, twoRow); 
+  char** boardChessComplete = up(boardComplete, blackBoxes);
   //Interpreter
-  interpreter(boardComplete2);
+  interpreter(boardChessComplete);
 }
 
