@@ -9,18 +9,18 @@ struct figureChess{
   char** figures;
 };
 void chess(figureChess c){
-  c->arrayfigure[1] = rook;
-  c->arrayfigure[2] = knight;
-  c->arrayfigure[3] = bishop;
-  c->arrayfigure[4] = queen;
-  c->arrayfigure[5] = king;
-  c->arrayfigure[6] = bishop;
-  c->arrayfigure[7] = knight;
-  c->arrayfigure[8] = rook;
+  c.arrayfigure[1] = rook;
+  c.arrayfigure[2] = knight;
+  c.arrayfigure[3] = bishop;
+  c.arrayfigure[4] = queen;
+  c.arrayfigure[5] = king;
+  c.arrayfigure[6] = bishop;
+  c.arrayfigure[7] = knight;
+  c.arrayfigure[8] = rook;
 }
-char** fila(figureChess c){
+figureChess fila(figureChess c){
   for(int i = 0; i < MAX_SIZE; i++){
-    c.figures = join(c.arrarfigure[i];
+    c.figures = join(c.figures, c.arrayfigure[i]);
   }
   return c;
 }
@@ -53,7 +53,7 @@ void display(){
   char** prueba17 = join(join(join(join(join(join(join(rook, knight), bishop), queen), king), bishop), knight), rook);  
   figureChess figure1;
   chess(figure1);
-  filas(figure1);
+  fila(figure1);
   interpreter(figure1.figures);
 
 }
