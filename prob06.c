@@ -39,6 +39,7 @@ void display(){
   //Board Chess
   char** twoRow = up(rowFirstReverse, rowFirst);
   char** boardChess = repeatV(twoRow, 4);
+  char** boardChessHalf = repeatV(twoRow, 2);
   //Figures
   figureChess rowStart;
   chess(&rowStart);
@@ -56,7 +57,7 @@ void display(){
   char** figuresWhite = up(rowFiguresStart, rowPawn);
   //Square with Figures
   char** boardFiguresWhite = superImpose(figuresWhite, boardChess);
-  char** boardComplete = up(boardFiguresWhite, boardChess);   
+  char** boardComplete = up(boardFiguresWhite, boardChessHalf);   
   //Interpreter
   interpreter(boardComplete);
 }
