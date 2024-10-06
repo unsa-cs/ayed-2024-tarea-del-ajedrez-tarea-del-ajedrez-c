@@ -56,6 +56,7 @@ void display(){
   figureChess figure1;
   chess(&figure1);
   figure1 = fila(figure1);
-  interpreter(figure1.figures);
+  char** prueba18 = superImpose(figure1.figures, prueba8);
+  interpreter(prueba18);
 
 }
