@@ -36,6 +36,9 @@ void display(){
   // Row Chess Square
   char** rowFirst = repeatH(joinWhiteBlack, 4);
   char** rowFirstReverse = reverse(rowFirst);
+  //Board Chess
+  char** twoRow = up(rowFirstReverse, rowFirst);
+  char** boardChess = repeatV(twoRow, 4);
   //Figures
   figureChess rowStart;
   chess(&rowStart);
@@ -51,7 +54,9 @@ void display(){
   char** rowPawnReverse = reverse(rowPawn);
   //Figures White
   char** figuresWhite = up(rowFiguresStart, rowPawn);
+  //Square with Figures
+  char** 
   //Interpreter
-  interpreter(figuresWhite);
+  interpreter(boardChess);
 }
 
