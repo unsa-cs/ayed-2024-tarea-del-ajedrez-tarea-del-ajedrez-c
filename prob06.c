@@ -59,10 +59,12 @@ void display(){
   char** boardFiguresWhite = superImpose(figuresWhite, boardChess);
   char** boardComplete = up(boardFiguresWhite, boardChessHalf);
   char** figuresBlack = reverse(up(rowPawn, rowFiguresStart));   
-  char** boardComplete2 = up(boardComplete, figuresBlack);
+  char** boardIncomplete = up(boardComplete, figuresBlack);
   char** blackBoxes = superImpose(figuresBlack, twoRow); 
   char** boardChessComplete = up(boardComplete, blackBoxes);
+  //deveritas
+  char** figuresComplete = up(up(figuresWhite, boardChessHalf), figuresBlack);
   //Interpreter
-  interpreter(boardChessComplete);
+  interpreter(figuresComplete);
 }
 
