@@ -1,6 +1,7 @@
 #include "chess.h"
 #include "figures.h"
 #include "stdio.h"
+#include <stdlib.h>
 #define MAX_SIZE 8
 
 
@@ -9,18 +10,18 @@ struct figureChess{
   char** figures;
 };
 void chess(figureChess* c){
-  c->arrayfigure[1] = rook;
-  c->arrayfigure[2] = knight;
-  c->arrayfigure[3] = bishop;
-  c->arrayfigure[4] = queen;
-  c->arrayfigure[5] = king;
-  c->arrayfigure[6] = bishop;
-  c->arrayfigure[7] = knight;
-  c->arrayfigure[8] = rook;
+  c->arrayfigure[0] = rook;
+  c->arrayfigure[1] = knight;
+  c->arrayfigure[2] = bishop;
+  c->arrayfigure[3] = queen;
+  c->arrayfigure[4] = king;
+  c->arrayfigure[5] = bishop;
+  c->arrayfigure[6] = knight;
+  c->arrayfigure[7] = rook;
 }
 figureChess fila(figureChess c){
-  c.figures = NULL;
-  for(int i = 0; i < MAX_SIZE; i++){
+  c.figures = rook;
+  for(int i = 1; i < MAX_SIZE; i++){
     c.figures = join(c.figures, c.arrayfigure[i]);
   }
   return c;
@@ -54,7 +55,7 @@ void display(){
   char** prueba17 = join(join(join(join(join(join(join(rook, knight), bishop), queen), king), bishop), knight), rook);  
   figureChess figure1;
   chess(&figure1);
-  fila(figure1);
+  figure1 = fila(figure1);
   interpreter(figure1.figures);
 
 }
