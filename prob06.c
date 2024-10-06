@@ -55,8 +55,9 @@ void display(){
   //Figures White
   char** figuresWhite = up(rowFiguresStart, rowPawn);
   //Square with Figures
-   
+  char** boardFiguresWhite = superImpose(figuresWhite, boardChess);
+  char** boardComplete = up(boardFiguresWhite, boardChess);   
   //Interpreter
-  interpreter(boardChess);
+  interpreter(boardComplete);
 }
 
