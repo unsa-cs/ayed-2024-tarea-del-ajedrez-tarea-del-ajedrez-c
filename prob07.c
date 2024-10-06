@@ -71,7 +71,8 @@ void display(){
   char** Knight180 = rotateR(Knight90);
   char** Knight270 = rotateL(knight);
   char** RowKnight = join(join(join(Knight0, Knight90), Knight180), Knight270);
+  char** HalfKnight = superImpose(RowKnight, boardChessHalf);
   //Interpreter
-  interpreter(RowKnight);
+  interpreter(HalfKnight);
 }
 
