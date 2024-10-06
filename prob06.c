@@ -64,7 +64,8 @@ void display(){
   char** boardChessComplete = up(boardComplete, blackBoxes);
   //deveritas
   char** figuresComplete = up(up(figuresWhite, boardChessHalf), figuresBlack);
+  char** chessComplete = superImpose(figuresComplete, boardChess);
   //Interpreter
-  interpreter(figuresComplete);
+  interpreter(chessComplete);
 }
 
