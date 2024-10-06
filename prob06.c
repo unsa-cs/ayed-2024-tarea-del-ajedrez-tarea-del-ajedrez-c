@@ -55,7 +55,7 @@ void display(){
   //Figures White
   char** figuresWhite = up(rowFiguresStart, rowPawn);
   //Square with Figures
-  char** 
+   
   //Interpreter
   interpreter(boardChess);
 }
