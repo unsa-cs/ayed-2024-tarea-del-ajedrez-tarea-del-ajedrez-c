@@ -44,8 +44,8 @@ void interpreter(char** fig){
     j++;
   }
  
-  glEnd(); 
-  glFlush(); 
+  glEnd();
+  glFlush();
 }
 
 int main(int argc, char **argv) { 
@@ -66,5 +66,3 @@ int main(int argc, char **argv) {
 
   return 0; 
 }
-
-
